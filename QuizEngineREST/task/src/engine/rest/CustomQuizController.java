@@ -21,7 +21,7 @@ public class CustomQuizController {
     }
 
     @GetMapping("{id}")
-    public ResponseEntity<Quiz> getCreatedQuiz(@PathVariable(name = "id") long id) {
+    public ResponseEntity<Quiz> getQuizById(@PathVariable(name = "id") long id) {
 
         Quiz quiz = quizService.getQuizById(id);
         return quiz == null ? new ResponseEntity<>(HttpStatus.NOT_FOUND) :
